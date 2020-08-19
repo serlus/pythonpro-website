@@ -191,6 +191,20 @@ def client_with_client(client, logged_user):
     return client
 
 
+@pytest.fixture
+def client_with_bootcamper(client, logged_user):
+    assign_role(logged_user, 'bootcamper')
+    client.force_login(logged_user)
+    return client
+
+
+@pytest.fixture
+def client_with_pythonista(client, logged_user):
+    assign_role(logged_user, 'pythonista')
+    client.force_login(logged_user)
+    return client
+
+
 @pytest.fixture(autouse=True)
 def use_db_always(db):
     pass
