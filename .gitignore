@@ -121,3 +121,6 @@ mediafiles/
 
 # local posgres files
 .pgdata
+
+# notes about project
+.note
